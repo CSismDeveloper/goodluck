@@ -1,125 +1,88 @@
 <!--== Start Preloader Content ==-->
 <style>
-  @keyframes ldio-4j5ay0xf86g {
- 0% {
-  opacity: 1
- }
+  .container1 {
+    --uib-size: 45px;
+    --uib-color: black;
+    --uib-speed: 1.75s;
+    --uib-bg-opacity: .1;
+    height: 31.25px;
+    width: 50px;
+    transform-origin: center;
+    overflow: visible;
+  }
 
- 100% {
-  opacity: 0
- }
-}
+  .car {
+    stroke: var(--uib-color);
+    stroke-dasharray: 100;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    animation:
+      travel var(--uib-speed) ease-in-out infinite,
+      fade var(--uib-speed) ease-out infinite;
+    will-change: stroke-dasharray, stroke-dashoffset;
+    transition: stroke 0.5s ease;
+  }
 
-.ldio-4j5ay0xf86g div {
- left: 94px;
- top: 48px;
- position: absolute;
- animation: ldio-4j5ay0xf86g linear 1s infinite;
- background: #fe718d;
- width: 12px;
- height: 24px;
- border-radius: 6px / 12px;
- transform-origin: 6px 52px;
-}
+  .track {
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: var(--uib-color);
+    opacity: var(--uib-bg-opacity);
+  }
 
-.ldio-4j5ay0xf86g div:nth-child(1) {
- transform: rotate(0deg);
- animation-delay: -0.9166666666666666s;
- background: #fe718d;
-}
+  @keyframes travel {
+    0% {
+      stroke-dashoffset: 100;
+    }
 
-.ldio-4j5ay0xf86g div:nth-child(2) {
- transform: rotate(30deg);
- animation-delay: -0.8333333333333334s;
- background: #fe718d;
-}
+    75% {
+      stroke-dashoffset: 0;
+    }
+  }
 
-.ldio-4j5ay0xf86g div:nth-child(3) {
- transform: rotate(60deg);
- animation-delay: -0.75s;
- background: #fe718d;
-}
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
 
-.ldio-4j5ay0xf86g div:nth-child(4) {
- transform: rotate(90deg);
- animation-delay: -0.6666666666666666s;
- background: #fe718d;
-}
+    20%,
+    55% {
+      opacity: 1;
+    }
 
-.ldio-4j5ay0xf86g div:nth-child(5) {
- transform: rotate(120deg);
- animation-delay: -0.5833333333333334s;
- background: #fe718d;
-}
-
-.ldio-4j5ay0xf86g div:nth-child(6) {
- transform: rotate(150deg);
- animation-delay: -0.5s;
- background: #fe718d;
-}
-
-.ldio-4j5ay0xf86g div:nth-child(7) {
- transform: rotate(180deg);
- animation-delay: -0.4166666666666667s;
- background: #fe718d;
-}
-
-.ldio-4j5ay0xf86g div:nth-child(8) {
- transform: rotate(210deg);
- animation-delay: -0.3333333333333333s;
- background: #fe718d;
-}
-
-.ldio-4j5ay0xf86g div:nth-child(9) {
- transform: rotate(240deg);
- animation-delay: -0.25s;
- background: #fe718d;
-}
-
-.ldio-4j5ay0xf86g div:nth-child(10) {
- transform: rotate(270deg);
- animation-delay: -0.16666666666666666s;
- background: #fe718d;
-}
-
-.ldio-4j5ay0xf86g div:nth-child(11) {
- transform: rotate(300deg);
- animation-delay: -0.08333333333333333s;
- background: #fe718d;
-}
-
-.ldio-4j5ay0xf86g div:nth-child(12) {
- transform: rotate(330deg);
- animation-delay: 0s;
- background: #fe718d;
-}
-
-.loadingio-spinner-spinner-977el9wwy2v {
- width: 200px;
- height: 200px;
- display: inline-block;
- overflow: hidden;
-}
-
-.ldio-4j5ay0xf86g {
- width: 100%;
- height: 100%;
- position: relative;
- transform: translateZ(0) scale(1);
- backface-visibility: hidden;
- transform-origin: 0 0;
- /* see note above */
-}
-
-.ldio-4j5ay0xf86g div {
- box-sizing: content-box;
-}
+    100% {
+      opacity: 0;
+    }
+  }
 </style>
 <div class="preloader-wrap">
     <div class="preloader">
-    <div class="loadingio-spinner-spinner-977el9wwy2v"><div class="ldio-4j5ay0xf86g">
-<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-</div></div>
+    <svg
+  class="container1" 
+  x="0px" 
+  y="0px"
+  viewBox="0 0 50 31.25"
+  height="31.25"
+  width="50"
+  preserveAspectRatio='xMidYMid meet'
+>
+  <path 
+    class="track"
+    stroke-width="4" 
+    fill="none" 
+    pathlength="100"
+    d="M0.625 21.5 h10.25 l3.75 -5.875 l7.375 15 l9.75 -30 l7.375 20.875 v0 h10.25"
+  />
+  <path 
+    class="car"
+    stroke-width="4" 
+    fill="none" 
+    pathlength="100"
+    d="M0.625 21.5 h10.25 l3.75 -5.875 l7.375 15 l9.75 -30 l7.375 20.875 v0 h10.25"
+  />
+</svg>
+
 
 
     </div>
