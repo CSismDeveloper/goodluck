@@ -75,12 +75,40 @@
             </div>
           </div>
           <div class="col-md-6 col-lg-5">
-            <div class="divider-about-content">
-              <div class="divider-content">
-                <h2 class="title">Welcome to <br>Moren Online Store</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque posuere mauris tincidunt orci, aliquet nam aliquet purus. Nulla in nullam eget at placerat egestas dignissim platea. Enim, euismod sed a integer tristique. Fringilla ultrices nunc, viverra interdum maecenas.</p>
-              </div>
-            </div>
+          <div class="divider-about-content">
+  <div class="divider-content">
+    <h2 class="title">Welcome to <br>Good Luck Company</h2>
+    <p>
+      We are a Manufacturer and Factory based in Vasai, Maharashtra, India. Led by our CEO, Zameer Khan, we operate with a team of up to 10 people and specialize in high-quality products with an annual turnover of 5 - 25 Cr. 
+      Our GST Registration was effective from 01-07-2017, and the firm operates as a Proprietorship.
+    </p>
+    <p>
+      <strong>Registered Address:</strong><br>
+      Gala No 126, Vora Industrial Estate No 4, 1st Floor, Premises Co-Op Hsc Soc Ltd, Village Navghar, District Thane, Vasai- 401210, Maharashtra, India.
+    </p>
+    <p>
+      <strong>Trade & Market:</strong><br>
+      Export Percentage: up to 20%.<br>
+      Major Markets: Dubai, Australia, UAE.
+    </p>
+    <p>
+      <strong>Statutory Profile:</strong><br>
+      Import Export Code (IEC): 03169*****.<br>
+      Banker: ICICI Banking Corporation Ltd.<br>
+      GST No.: 27ATMPK1984G1ZB.<br>
+      GST Partner Name: Zameer Ahmed Shamim Ahmed Khan.
+    </p>
+    <p>
+      <strong>Payment & Shipment Details:</strong><br>
+      <strong>Payment Modes:</strong> Cash, Credit Card, Bank Transfer, Cheque, DD, Online.<br>
+      <strong>Shipment Modes:</strong> By Road, By Cargo, By Sea, By Air.
+    </p>
+    <p>
+      Discuss more about your requirements by contacting us today!
+    </p>
+  </div>
+</div>
+
           </div>
         </div>
       </div>
@@ -124,245 +152,9 @@
     </section>
     <!--== End Brand Logo Area ==-->
 
-    <!--== Start Team Area Wrapper ==-->
-    <section class="team-area team-creative-area">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="section-title text-center">
-              <h2 class="title">Company Leadership</h2>
-            </div>
-          </div>
-        </div>
-        <div class="row team-members-style2 row-gutter-60">
-          <div class="col-sm-6 col-md-4">
-            <div class="team-member">
-              <div class="thumb">
-                <img src="assets/img/team/1.jpg" alt="Broly-HasTech">
-              </div>
-              <div class="content">
-                <div class="member-info">
-                  <h4 class="name">Agnes Wilson</h4>
-                  <p>Manager</p>
-                  <div class="social-icons">
-                    <a href="#"><i class="fa lastudioicon-b-facebook"></i></a>
-                    <a href="#"><i class="fa lastudioicon-b-twitter"></i></a>
-                    <a href="#"><i class="fa lastudioicon-b-pinterest"></i></a>
-                    <a href="#"><i class="fa lastudioicon-b-instagram"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4">
-            <div class="team-member mt-xs-30">
-              <div class="thumb">
-                <img src="assets/img/team/2.jpg" alt="Broly-HasTech">
-              </div>
-              <div class="content">
-                <div class="member-info">
-                  <h4 class="name">John Doe</h4>
-                  <p>Creative Director</p>
-                  <div class="social-icons">
-                    <a href="#"><i class="fa lastudioicon-b-facebook"></i></a>
-                    <a href="#"><i class="fa lastudioicon-b-twitter"></i></a>
-                    <a href="#"><i class="fa lastudioicon-b-pinterest"></i></a>
-                    <a href="#"><i class="fa lastudioicon-b-instagram"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4">
-            <div class="team-member mt-sm-30">
-              <div class="thumb">
-                <img src="assets/img/team/3.jpg" alt="Broly-HasTech">
-              </div>
-              <div class="content">
-                <div class="member-info">
-                  <h4 class="name">John Terry</h4>
-                  <p>Designer</p>
-                  <div class="social-icons">
-                    <a href="#"><i class="fa lastudioicon-b-facebook"></i></a>
-                    <a href="#"><i class="fa lastudioicon-b-twitter"></i></a>
-                    <a href="#"><i class="fa lastudioicon-b-pinterest"></i></a>
-                    <a href="#"><i class="fa lastudioicon-b-instagram"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--== End Team Area Wrapper ==-->
+   
 
-    <!--== Start Blog Area Wrapper ==-->
-    <section class="blog-area blog-about-area">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-lg-6 m-auto">
-            <div class="section-title text-center">
-              <h2 class="title">Latest News</h2>
-            </div>
-          </div>
-        </div>
-        <div class="row post-items">
-          <div class="col-md-8 offset-md-2 col-lg-12 offset-lg-0">
-            <div class="swiper-container post-slider-container">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <!--== Start Blog Post Item ==-->
-                  <div class="post-item">
-                    <div class="thumb">
-                      <a href="blog-details.html"><img src="assets/img/blog/s1.jpg" alt="Moren-Image"></a>
-                    </div>
-                    <div class="content">
-                      <div class="post-meta">
-                        <img src="assets/img/icons/s1.jpg" alt="Image">
-                        <a href="blog.html">Agnes Wilson</a>
-                      </div>
-                      <div class="inner-content">
-                        <h4 class="title">
-                          <a href="blog-details.html">Upcycling Brand Nereja</a>
-                        </h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam risus semper varius vestibulum…</p>
-                      </div>
-                      <a href="blog-details.html" class="btn-theme btn-border btn-black">Continue reading</a>
-                    </div>
-                  </div>
-                  <!--== End Blog Post Item ==-->
-                </div>
-                <div class="swiper-slide">
-                  <!--== Start Blog Post Item ==-->
-                  <div class="post-item">
-                    <div class="thumb">
-                      <a href="blog-details.html"><img src="assets/img/blog/s2.jpg" alt="Moren-Image"></a>
-                    </div>
-                    <div class="content">
-                      <div class="post-meta">
-                        <img src="assets/img/icons/s1.jpg" alt="Image">
-                        <a href="blog.html">John Doe</a>
-                      </div>
-                      <div class="inner-content">
-                        <h4 class="title">
-                          <a href="blog-details.html">Katie Holmes Revives</a>
-                        </h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam risus semper varius vestibulum…</p>
-                      </div>
-                      <a href="blog-details.html" class="btn-theme btn-border btn-black">Continue reading</a>
-                    </div>
-                  </div>
-                  <!--== End Blog Post Item ==-->
-                </div>
-                <div class="swiper-slide">
-                  <!--== Start Blog Post Item ==-->
-                  <div class="post-item">
-                    <div class="thumb">
-                      <a href="blog-details.html"><img src="assets/img/blog/s3.jpg" alt="Moren-Image"></a>
-                    </div>
-                    <div class="content">
-                      <div class="post-meta">
-                        <img src="assets/img/icons/s1.jpg" alt="Image">
-                        <a href="blog.html">Agnes Wilson</a>
-                      </div>
-                      <div class="inner-content">
-                        <h4 class="title">
-                          <a href="blog-details.html">Honey, They Shrunk</a>
-                        </h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam risus semper varius vestibulum…</p>
-                      </div>
-                      <a href="blog-details.html" class="btn-theme btn-border btn-black">Continue reading</a>
-                    </div>
-                  </div>
-                  <!--== End Blog Post Item ==-->
-                </div>
-                <div class="swiper-slide">
-                  <!--== Start Blog Post Item ==-->
-                  <div class="post-item">
-                    <div class="thumb">
-                      <a href="blog-details.html"><img src="assets/img/blog/s4.jpg" alt="Moren-Image"></a>
-                    </div>
-                    <div class="content">
-                      <div class="post-meta">
-                        <img src="assets/img/icons/s1.jpg" alt="Image">
-                        <a href="blog.html">John Doe</a>
-                      </div>
-                      <div class="inner-content">
-                        <h4 class="title">
-                          <a href="blog-details.html">Consider the Backless</a>
-                        </h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam risus semper varius vestibulum…</p>
-                      </div>
-                      <a href="blog-details.html" class="btn-theme btn-border btn-black">Continue reading</a>
-                    </div>
-                  </div>
-                  <!--== End Blog Post Item ==-->
-                </div>
-              </div>
-              <!-- Add Pagination -->
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--== End Blog Area Wrapper ==-->
-
-    <!--== Start Contact Area ==-->
-    <section class="contact-area contact-about-area bg-img" data-bg-img="assets/img/about/2.jpg">
-      <div class="container-fluid">
-        <div class="row row-gutter-0">
-          <div class="col-lg-6">
-            <div class="col-left">
-              <div class="section-title text-center">
-                <h2 class="title">let’s talk</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc, sit et consectetur fermentum, felis. Proin est amet sit vitae purus.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="col-right">
-              <div class="contact-form">
-                <form class="contact-form-wrapper" id="contact-form" action="http://whizthemes.com/mail-php/raju/arden/mail.php" method="post">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <input class="form-control" type="text" name="con_name" placeholder="Name*">
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <input class="form-control" type="email" name="con_email" placeholder="Email*">
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <input class="form-control" type="text" name="con_phone" placeholder="Phone Number">
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-group mb-0">
-                        <textarea class="form-control textarea" name="con_message" placeholder="How can we help?"></textarea>
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-group mb-0">
-                        <button class="btn btn-theme btn-black" type="submit">Send Message</button>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-              </div>
-              <!-- Message Notification -->
-              <div class="form-message"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="canvas-overlay"></div>
-    </section>
-    <!--== End Contact Area ==-->
+    
   </main>
 
 

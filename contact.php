@@ -125,19 +125,12 @@
                      <i class="lastudioicon lastudioicon-pin-3-2"></i>
                     </div>
                     <div class="content">
-                      <h4>Moren Store 1</h4>
-                      <p>PO Box 16122 Collins Street West Victoria 8007 Australia</p>
+                      <h4>Goodluck Enterprises</h4>
+                      <p>
+Gala No 126, Vora Industrial Estate No 4, 1st Floor, Premises Co-Op Hsc Soc Ltd, Village Navghar, District Thane, Ghodbunder, Vasai - 401210, Palghar, Maharashtra, India</p>
                     </div>
                   </div>
-                  <div class="contact-info-item">
-                    <div class="icon">
-                      <span><i class="lastudioicon lastudioicon-pin-3-2"></i></span>
-                    </div>
-                    <div class="content">
-                      <h4>Moren Store 2</h4>
-                      <p>8134 Budd Rd Terre Haute, In 3548</p>
-                    </div>
-                  </div>
+               
                 </div>
                 <div class="align-bottom">
                   <div class="contact-info-item info-item2">
@@ -145,7 +138,7 @@
                       <span><i class="lastudioicon lastudioicon-mail"></i></span>                      
                     </div>
                     <div class="content">
-                      <p>info@moren.com</p>
+                      <p>info@goodluck.com</p>
                     </div>
                   </div>
                   <div class="contact-info-item">
@@ -153,7 +146,7 @@
                       <span><i class="lastudioicon lastudioicon-phone-call-2"></i></span>                      
                     </div>
                     <div class="content">
-                      <p>+354-354-4861</p>
+                      <p>+91 8046 0451 001</p>
                     </div>
                   </div>
                   <div class="contact-info-item social-icons-item mb-0 pb-0">
@@ -177,14 +170,14 @@
 
     <!--== Start Map Area ==-->
     <div class="contact-map-area">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8402891185374!2d144.95373631590425!3d-37.81720974201477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2ssg!4v1607294780661!5m2!1sen!2ssg"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3765.635638816744!2d72.8701300752109!3d19.298204981952615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTnCsDE3JzUzLjUiTiA3MsKwNTInMjEuNyJF!5e0!3m2!1sen!2sin!4v1735882803651!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <!--== End Map Area ==-->
   </main>
 
 <?php include('footer.php') ?>
 
-<?php include('siderbar.php') ?>
+<?php include('sidebar.php') ?>
 <!--=======================Javascript============================-->
 
 <!--=== Modernizr Min Js ===-->
