@@ -14204,7 +14204,7 @@ table p {
   margin-bottom: 5px;
 }
 .single-product-info .product-category {
-  font-size: 14px;
+  font-size: 18px;
   margin-bottom: 3px;
 }
 .single-product-info .product-category span {
@@ -18414,7 +18414,7 @@ table p {
 }
 .sidebar-area .widget-search-box form .form-input-item input:-moz-placeholder {
   /* Firefox 18- */
-  font-size: 14px;
+  font-size: 16px;
 }
 .sidebar-area .widget-search-box form .form-input-item button {
   border: none;

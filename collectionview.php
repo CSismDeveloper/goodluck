@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 
 <head>
     <meta charset="utf-8">
@@ -48,18 +48,18 @@
 <body>
 
 <!--wrapper start-->
-<div class="wrapper shop-masonry-wrapper">
+<div class="wrapper shop-fullwidth-wrapper">
 
-<?php include('header.php') ?>
+  <?php include('header.php') ?>
   
   <main class="main-content">
     <!--== Start Page Title Area ==-->
-    <section class="page-title-area bg-img" data-bg-img="assets/img/photos/bg-page1.jpg"style="opacity:0;">
+    <section class="page-title-area bg-img" data-bg-img="assets/img/photos/bg-page1.jpg" style="opacity:0">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
             <div class="page-title-content">
-              <h2 class="title">Shop Masonry</h2>
+              <h2 class="title">Shop Fullwidth</h2>
               <div class="bread-crumbs"><a href="index.html">Home<span class="breadcrumb-sep">></span></a><span class="active">Shop</span></div>
             </div>
           </div>
@@ -69,14 +69,14 @@
     <!--== End Page Title Area ==-->
 
     <!--== Start Products Area Wrapper ==-->
-    <section class="product-area shop-masonry-area">
-      <div class="container-fluid">
-        <div class="row row-gutter-0">
-          <div class="col-md-12">
+    <div class="product-area shop-fullwidth-area style-two">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
             <div class="shop-toolbar-wrap">
               <div class="shop-toolbar-left">
                 <div class="product-showing-status">
-                  <p class="count-result">Showing 1–18 of 88 results</p>
+                  <p class="count-result">Showing 1–12 of 88 results</p>
                 </div>
               </div>
               <div class="shop-toolbar-right">
@@ -107,638 +107,108 @@
                     <li><a href="shop.html">Sort by Price: <i class="lastudioicon-arrow-down"></i></a></li>
                   </ul>
                 </div>
+                <div class="product-view-mode">
+                  <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                      <button class="nav-link" id="nav-list-tab" data-bs-toggle="tab" data-bs-target="#nav-list" type="button" role="tab" aria-controls="nav-list" aria-selected="false"><i class="lastudioicon-list-bullet-2"></i></button>
+                      <button class="nav-link active" id="nav-grid-tab" data-bs-toggle="tab" data-bs-target="#nav-grid" type="button" role="tab" aria-controls="nav-grid" aria-selected="true"><i class="lastudioicon-microsoft"></i></button>
+                    </div>
+                  </nav>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="nav-grid" role="tabpanel" aria-labelledby="nav-grid-tab">
+              <?php
+// Database Connection
+include('db_connection.php');
+
+// Fetch All Products
+$sql = "SELECT id, title, price, image1 FROM products";
+$result = $conn->query($sql);
+?>
+
+<div class="row row-gutter-60" data-aos="fade-up" data-aos-duration="1000">
+    <?php while ($row = $result->fetch_assoc()): ?>
+        <div class="col-sm-6 col-lg-4">
             <!-- Start Product Item -->
             <div class="product-item">
-              <div class="product-thumb">
-                <a href="shop-single-product.html">
-                  <img src="assets/img/shop/masonry/1.jpg" alt="Moren-Shop">
-                  <span class="thumb-overlay overlay-black-7"></span>
-                </a>
-                <div class="product-action action-style2">
-                  <a class="action-cart ht-tooltip" data-tippy-content="Add to cart" href="shop-cart.html" title="Add to cart">
-                    <i class="lastudioicon-shopping-cart-3"></i>
-                  </a>
-                  <a class="action-quick-view ht-tooltip" data-tippy-content="Quick View" href="javascript:void(0);" title="Wishlist">
-                    <i class="lastudioicon-search-zoom-in"></i>
-                  </a>
-                  <a class="action-wishlist ht-tooltip" data-tippy-content="Add to wishlist" href="shop-wishlist.html" title="Add to wishlist">
-                    <i class="lastudioicon-heart-2"></i>
-                  </a>
-                  <a class="action-compare ht-tooltip" data-tippy-content="Add to compare" href="shop-compare.html" title="Add to compare">
-                    <i class="lastudioicon-compare"></i>
-                  </a>
+                <div class="product-thumb">
+                    <a href="collectiondetails.php?id=<?= $row['id']; ?>">
+                        <img src="productimage/<?= $row['image1']; ?>" alt="<?= $row['title']; ?>">
+                        <span class="thumb-overlay"></span>
+                    </a>
                 </div>
-                <div class="product-action-info action-info-style2">
-                  <div class="content-inner">
-                    <h4 class="title"><a href="shop-single-product.html">Believer Delicate Earrings</a></h4>
-                    <div class="prices">
-                      <span class="price">£69.00</span>
+                <div class="product-info">
+                    <div class="content-inner">
+                        <h4 class="title"><a href="collectiondetails.php?id=<?= $row['id']; ?>"><?= $row['title']; ?></a></h4>
+                        <div class="prices">
+                            <span class="price"> ₹<?= $row['price']; ?></span>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
             </div>
             <!-- End Product Item -->
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <!-- Start Product Item -->
-            <div class="product-item">
-              <div class="product-thumb">
-                <a href="shop-single-product.html">
-                  <img src="assets/img/shop/masonry/2.jpg" alt="Moren-Shop">
-                  <span class="thumb-overlay overlay-black-7"></span>
-                </a>
-                <div class="product-action action-style2">
-                  <a class="action-cart ht-tooltip" data-tippy-content="Add to cart" href="shop-cart.html" title="Add to cart">
-                    <i class="lastudioicon-shopping-cart-3"></i>
-                  </a>
-                  <a class="action-quick-view ht-tooltip" data-tippy-content="Quick View" href="javascript:void(0);" title="Wishlist">
-                    <i class="lastudioicon-search-zoom-in"></i>
-                  </a>
-                  <a class="action-wishlist ht-tooltip" data-tippy-content="Add to wishlist" href="shop-wishlist.html" title="Add to wishlist">
-                    <i class="lastudioicon-heart-2"></i>
-                  </a>
-                  <a class="action-compare ht-tooltip" data-tippy-content="Add to compare" href="shop-compare.html" title="Add to compare">
-                    <i class="lastudioicon-compare"></i>
-                  </a>
-                </div>
-                <div class="product-action-info action-info-style2">
-                  <div class="content-inner">
-                    <h4 class="title"><a href="shop-single-product.html">Believer Delicate Earrings</a></h4>
-                    <div class="prices">
-                      <span class="price">£39.00</span>
-                    </div>
-                  </div>
-                </div>
+        </div>
+    <?php endwhile; ?>
+</div>
+
+
+<?php
+// Close Database Connection
+$conn->close();
+?>
               </div>
+              
             </div>
-            <!-- End Product Item -->
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <!-- Start Product Item -->
-            <div class="product-item">
-              <div class="product-thumb">
-                <a href="shop-single-product.html">
-                  <img src="assets/img/shop/masonry/3.jpg" alt="Moren-Shop">
-                  <span class="thumb-overlay overlay-black-7"></span>
-                </a>
-                <div class="product-action action-style2">
-                  <a class="action-cart ht-tooltip" data-tippy-content="Add to cart" href="shop-cart.html" title="Add to cart">
-                    <i class="lastudioicon-shopping-cart-3"></i>
-                  </a>
-                  <a class="action-quick-view ht-tooltip" data-tippy-content="Quick View" href="javascript:void(0);" title="Wishlist">
-                    <i class="lastudioicon-search-zoom-in"></i>
-                  </a>
-                  <a class="action-wishlist ht-tooltip" data-tippy-content="Add to wishlist" href="shop-wishlist.html" title="Add to wishlist">
-                    <i class="lastudioicon-heart-2"></i>
-                  </a>
-                  <a class="action-compare ht-tooltip" data-tippy-content="Add to compare" href="shop-compare.html" title="Add to compare">
-                    <i class="lastudioicon-compare"></i>
-                  </a>
-                </div>
-                <div class="product-action-info action-info-style2">
-                  <div class="content-inner">
-                    <h4 class="title"><a href="shop-single-product.html">Black & Gold Forever Double Choker Necklace</a></h4>
-                    <div class="prices">
-                      <span class="price">£39.00</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="pagination-area">
+              <nav>
+                <ul class="page-numbers">
+                  <li>
+                    <a class="page-number active" href="blog.html">1</a>
+                  </li>
+                  <li>
+                    <a class="page-number" href="blog.html">2</a>
+                  </li>
+                  <li>
+                    <a class="page-number" href="blog.html">3</a>
+                  </li>
+                  <li>
+                    <a class="page-number" href="blog.html">4</a>
+                  </li>
+                  <li>
+                    <a class="page-numbe" href="blog.html">…</a>
+                  </li>
+                  <li>
+                    <a class="page-number" href="blog.html">6</a>
+                  </li>
+                  <li>
+                    <a class="page-number" href="blog.html">7</a>
+                  </li>
+                  <li>
+                    <a class="page-number" href="blog.html">8</a>
+                  </li>
+                  <li>
+                    <a class="page-number next" href="blog.html">
+                      <i class="icofont-long-arrow-right"></i>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
             </div>
-            <!-- End Product Item -->
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <!-- Start Product Item -->
-            <div class="product-item">
-              <div class="product-thumb">
-                <a href="shop-single-product.html">
-                  <img src="assets/img/shop/masonry/4.jpg" alt="Moren-Shop">
-                  <span class="thumb-overlay overlay-black-7"></span>
-                </a>
-                <div class="product-action action-style2">
-                  <a class="action-cart ht-tooltip" data-tippy-content="Add to cart" href="shop-cart.html" title="Add to cart">
-                    <i class="lastudioicon-shopping-cart-3"></i>
-                  </a>
-                  <a class="action-quick-view ht-tooltip" data-tippy-content="Quick View" href="javascript:void(0);" title="Wishlist">
-                    <i class="lastudioicon-search-zoom-in"></i>
-                  </a>
-                  <a class="action-wishlist ht-tooltip" data-tippy-content="Add to wishlist" href="shop-wishlist.html" title="Add to wishlist">
-                    <i class="lastudioicon-heart-2"></i>
-                  </a>
-                  <a class="action-compare ht-tooltip" data-tippy-content="Add to compare" href="shop-compare.html" title="Add to compare">
-                    <i class="lastudioicon-compare"></i>
-                  </a>
-                </div>
-                <div class="product-action-info action-info-style2">
-                  <div class="content-inner">
-                    <h4 class="title"><a href="shop-single-product.html">Black check texture shirt</a></h4>
-                    <div class="prices">
-                      <span class="price">£19.00</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End Product Item -->
-          </div>
-          <div class="col-sm-6 col-md-6">
-            <!-- Start Product Item -->
-            <div class="product-item">
-              <div class="product-thumb">
-                <a href="shop-single-product.html">
-                  <img src="assets/img/shop/masonry/5.jpg" alt="Moren-Shop">
-                  <span class="thumb-overlay overlay-black-7"></span>
-                </a>
-                <div class="product-action action-style2">
-                  <a class="action-cart ht-tooltip" data-tippy-content="Add to cart" href="shop-cart.html" title="Add to cart">
-                    <i class="lastudioicon-shopping-cart-3"></i>
-                  </a>
-                  <a class="action-quick-view ht-tooltip" data-tippy-content="Quick View" href="javascript:void(0);" title="Wishlist">
-                    <i class="lastudioicon-search-zoom-in"></i>
-                  </a>
-                  <a class="action-wishlist ht-tooltip" data-tippy-content="Add to wishlist" href="shop-wishlist.html" title="Add to wishlist">
-                    <i class="lastudioicon-heart-2"></i>
-                  </a>
-                  <a class="action-compare ht-tooltip" data-tippy-content="Add to compare" href="shop-compare.html" title="Add to compare">
-                    <i class="lastudioicon-compare"></i>
-                  </a>
-                </div>
-                <div class="product-action-info action-info-style2">
-                  <div class="content-inner">
-                    <h4 class="title"><a href="shop-single-product.html">Black check texture shirt</a></h4>
-                    <div class="prices">
-                      <span class="price">£19.90</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End Product Item -->
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <!-- Start Product Item -->
-            <div class="product-item">
-              <div class="product-thumb">
-                <a href="shop-single-product.html">
-                  <img src="assets/img/shop/masonry/6.jpg" alt="Moren-Shop">
-                  <span class="thumb-overlay overlay-black-7"></span>
-                </a>
-                <div class="product-action action-style2">
-                  <a class="action-cart ht-tooltip" data-tippy-content="Add to cart" href="shop-cart.html" title="Add to cart">
-                    <i class="lastudioicon-shopping-cart-3"></i>
-                  </a>
-                  <a class="action-quick-view ht-tooltip" data-tippy-content="Quick View" href="javascript:void(0);" title="Wishlist">
-                    <i class="lastudioicon-search-zoom-in"></i>
-                  </a>
-                  <a class="action-wishlist ht-tooltip" data-tippy-content="Add to wishlist" href="shop-wishlist.html" title="Add to wishlist">
-                    <i class="lastudioicon-heart-2"></i>
-                  </a>
-                  <a class="action-compare ht-tooltip" data-tippy-content="Add to compare" href="shop-compare.html" title="Add to compare">
-                    <i class="lastudioicon-compare"></i>
-                  </a>
-                </div>
-                <div class="product-action-info action-info-style2">
-                  <div class="content-inner">
-                    <h4 class="title"><a href="shop-single-product.html">Blue wide-leg jeans</a></h4>
-                    <div class="prices">
-                      <span class="price">£35.90</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End Product Item -->
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <!-- Start Product Item -->
-            <div class="product-item">
-              <div class="product-thumb">
-                <a href="shop-single-product.html">
-                  <img src="assets/img/shop/masonry/7.jpg" alt="Moren-Shop">
-                  <span class="thumb-overlay overlay-black-7"></span>
-                </a>
-                <div class="product-action action-style2">
-                  <a class="action-cart ht-tooltip" data-tippy-content="Add to cart" href="shop-cart.html" title="Add to cart">
-                    <i class="lastudioicon-shopping-cart-3"></i>
-                  </a>
-                  <a class="action-quick-view ht-tooltip" data-tippy-content="Quick View" href="javascript:void(0);" title="Wishlist">
-                    <i class="lastudioicon-search-zoom-in"></i>
-                  </a>
-                  <a class="action-wishlist ht-tooltip" data-tippy-content="Add to wishlist" href="shop-wishlist.html" title="Add to wishlist">
-                    <i class="lastudioicon-heart-2"></i>
-                  </a>
-                  <a class="action-compare ht-tooltip" data-tippy-content="Add to compare" href="shop-compare.html" title="Add to compare">
-                    <i class="lastudioicon-compare"></i>
-                  </a>
-                </div>
-                <div class="product-action-info action-info-style2">
-                  <div class="content-inner">
-                    <h4 class="title"><a href="shop-single-product.html">Blue wide-leg jeans</a></h4>
-                    <div class="prices">
-                      <span class="price">£35.90</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End Product Item -->
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <!-- Start Product Item -->
-            <div class="product-item">
-              <div class="product-thumb">
-                <a href="shop-single-product.html">
-                  <img src="assets/img/shop/masonry/8.jpg" alt="Moren-Shop">
-                  <span class="thumb-overlay overlay-black-7"></span>
-                </a>
-                <div class="product-action action-style2">
-                  <a class="action-cart ht-tooltip" data-tippy-content="Add to cart" href="shop-cart.html" title="Add to cart">
-                    <i class="lastudioicon-shopping-cart-3"></i>
-                  </a>
-                  <a class="action-quick-view ht-tooltip" data-tippy-content="Quick View" href="javascript:void(0);" title="Wishlist">
-                    <i class="lastudioicon-search-zoom-in"></i>
-                  </a>
-                  <a class="action-wishlist ht-tooltip" data-tippy-content="Add to wishlist" href="shop-wishlist.html" title="Add to wishlist">
-                    <i class="lastudioicon-heart-2"></i>
-                  </a>
-                  <a class="action-compare ht-tooltip" data-tippy-content="Add to compare" href="shop-compare.html" title="Add to compare">
-                    <i class="lastudioicon-compare"></i>
-                  </a>
-                </div>
-                <div class="product-action-info action-info-style2">
-                  <div class="content-inner">
-                    <h4 class="title"><a href="shop-single-product.html">buttoned waistcoat</a></h4>
-                    <div class="prices">
-                      <span class="price">£45.90</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End Product Item -->
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <!-- Start Product Item -->
-            <div class="product-item">
-              <div class="product-thumb">
-                <a href="shop-single-product.html">
-                  <img src="assets/img/shop/masonry/9.jpg" alt="Moren-Shop">
-                  <span class="thumb-overlay overlay-black-7"></span>
-                </a>
-                <div class="product-action action-style2">
-                  <a class="action-cart ht-tooltip" data-tippy-content="Add to cart" href="shop-cart.html" title="Add to cart">
-                    <i class="lastudioicon-shopping-cart-3"></i>
-                  </a>
-                  <a class="action-quick-view ht-tooltip" data-tippy-content="Quick View" href="javascript:void(0);" title="Wishlist">
-                    <i class="lastudioicon-search-zoom-in"></i>
-                  </a>
-                  <a class="action-wishlist ht-tooltip" data-tippy-content="Add to wishlist" href="shop-wishlist.html" title="Add to wishlist">
-                    <i class="lastudioicon-heart-2"></i>
-                  </a>
-                  <a class="action-compare ht-tooltip" data-tippy-content="Add to compare" href="shop-compare.html" title="Add to compare">
-                    <i class="lastudioicon-compare"></i>
-                  </a>
-                </div>
-                <div class="product-action-info action-info-style2">
-                  <div class="content-inner">
-                    <h4 class="title"><a href="shop-single-product.html">Buttoned Waistcoat</a></h4>
-                    <div class="prices">
-                      <span class="price">£45.90</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End Product Item -->
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <!-- Start Product Item -->
-            <div class="product-item">
-              <div class="product-thumb">
-                <a href="shop-single-product.html">
-                  <img src="assets/img/shop/masonry/10.jpg" alt="Moren-Shop">
-                  <span class="thumb-overlay overlay-black-7"></span>
-                </a>
-                <div class="product-action action-style2">
-                  <a class="action-cart ht-tooltip" data-tippy-content="Add to cart" href="shop-cart.html" title="Add to cart">
-                    <i class="lastudioicon-shopping-cart-3"></i>
-                  </a>
-                  <a class="action-quick-view ht-tooltip" data-tippy-content="Quick View" href="javascript:void(0);" title="Wishlist">
-                    <i class="lastudioicon-search-zoom-in"></i>
-                  </a>
-                  <a class="action-wishlist ht-tooltip" data-tippy-content="Add to wishlist" href="shop-wishlist.html" title="Add to wishlist">
-                    <i class="lastudioicon-heart-2"></i>
-                  </a>
-                  <a class="action-compare ht-tooltip" data-tippy-content="Add to compare" href="shop-compare.html" title="Add to compare">
-                    <i class="lastudioicon-compare"></i>
-                  </a>
-                </div>
-                <div class="product-action-info action-info-style2">
-                  <div class="content-inner">
-                    <h4 class="title"><a href="shop-single-product.html">Disappearing Into the Sea Necklace</a></h4>
-                    <div class="prices">
-                      <span class="price">£39.00</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End Product Item -->
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <!-- Start Product Item -->
-            <div class="product-item">
-              <div class="product-thumb">
-                <a href="shop-single-product.html">
-                  <img src="assets/img/shop/masonry/11.jpg" alt="Moren-Shop">
-                  <span class="thumb-overlay overlay-black-7"></span>
-                </a>
-                <div class="product-action action-style2">
-                  <a class="action-cart ht-tooltip" data-tippy-content="Add to cart" href="shop-cart.html" title="Add to cart">
-                    <i class="lastudioicon-shopping-cart-3"></i>
-                  </a>
-                  <a class="action-quick-view ht-tooltip" data-tippy-content="Quick View" href="javascript:void(0);" title="Wishlist">
-                    <i class="lastudioicon-search-zoom-in"></i>
-                  </a>
-                  <a class="action-wishlist ht-tooltip" data-tippy-content="Add to wishlist" href="shop-wishlist.html" title="Add to wishlist">
-                    <i class="lastudioicon-heart-2"></i>
-                  </a>
-                  <a class="action-compare ht-tooltip" data-tippy-content="Add to compare" href="shop-compare.html" title="Add to compare">
-                    <i class="lastudioicon-compare"></i>
-                  </a>
-                </div>
-                <div class="product-action-info action-info-style2">
-                  <div class="content-inner">
-                    <h4 class="title"><a href="shop-single-product.html">Disappearing Into the Sea Necklace</a></h4>
-                    <div class="prices">
-                      <span class="price">£49.00</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End Product Item -->
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <!-- Start Product Item -->
-            <div class="product-item">
-              <div class="product-thumb">
-                <a href="shop-single-product.html">
-                  <img src="assets/img/shop/masonry/12.jpg" alt="Moren-Shop">
-                  <span class="bg-thumb" data-bg-img="assets/img/shop/masonry/13.jpg"></span>
-                  <span class="thumb-overlay overlay-black-7"></span>
-                </a>
-                <div class="product-action action-style2">
-                  <a class="action-cart ht-tooltip" data-tippy-content="Add to cart" href="shop-cart.html" title="Add to cart">
-                    <i class="lastudioicon-shopping-cart-3"></i>
-                  </a>
-                  <a class="action-quick-view ht-tooltip" data-tippy-content="Quick View" href="javascript:void(0);" title="Wishlist">
-                    <i class="lastudioicon-search-zoom-in"></i>
-                  </a>
-                  <a class="action-wishlist ht-tooltip" data-tippy-content="Add to wishlist" href="shop-wishlist.html" title="Add to wishlist">
-                    <i class="lastudioicon-heart-2"></i>
-                  </a>
-                  <a class="action-compare ht-tooltip" data-tippy-content="Add to compare" href="shop-compare.html" title="Add to compare">
-                    <i class="lastudioicon-compare"></i>
-                  </a>
-                </div>
-                <div class="product-action-info action-info-style2">
-                  <div class="content-inner">
-                    <h4 class="title"><a href="shop-single-product.html">Double Breasted Blazer</a></h4>
-                    <div class="prices">
-                      <span class="price">£49.90</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End Product Item -->
-          </div>
-          <div class="col-sm-6 col-md-6">
-            <!-- Start Product Item -->
-            <div class="product-item">
-              <div class="product-thumb">
-                <a href="shop-single-product.html">
-                  <img src="assets/img/shop/masonry/14.jpg" alt="Moren-Shop">
-                  <span class="bg-thumb" data-bg-img="assets/img/shop/masonry/15.jpg"></span>
-                  <span class="thumb-overlay overlay-black-7"></span>
-                </a>
-                <div class="product-action action-style2">
-                  <a class="action-cart ht-tooltip" data-tippy-content="Add to cart" href="shop-cart.html" title="Add to cart">
-                    <i class="lastudioicon-shopping-cart-3"></i>
-                  </a>
-                  <a class="action-quick-view ht-tooltip" data-tippy-content="Quick View" href="javascript:void(0);" title="Wishlist">
-                    <i class="lastudioicon-search-zoom-in"></i>
-                  </a>
-                  <a class="action-wishlist ht-tooltip" data-tippy-content="Add to wishlist" href="shop-wishlist.html" title="Add to wishlist">
-                    <i class="lastudioicon-heart-2"></i>
-                  </a>
-                  <a class="action-compare ht-tooltip" data-tippy-content="Add to compare" href="shop-compare.html" title="Add to compare">
-                    <i class="lastudioicon-compare"></i>
-                  </a>
-                </div>
-                <div class="product-action-info action-info-style2">
-                  <div class="content-inner">
-                    <h4 class="title"><a href="shop-single-product.html">Double Breasted Blazer</a></h4>
-                    <div class="prices">
-                      <span class="price">£39.90</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End Product Item -->
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <!-- Start Product Item -->
-            <div class="product-item">
-              <div class="product-thumb">
-                <a href="shop-single-product.html">
-                  <img src="assets/img/shop/masonry/16.jpg" alt="Moren-Shop">
-                  <span class="bg-thumb" data-bg-img="assets/img/shop/masonry/17.jpg"></span>
-                  <span class="thumb-overlay overlay-black-7"></span>
-                </a>
-                <div class="product-action action-style2">
-                  <a class="action-cart ht-tooltip" data-tippy-content="Add to cart" href="shop-cart.html" title="Add to cart">
-                    <i class="lastudioicon-shopping-cart-3"></i>
-                  </a>
-                  <a class="action-quick-view ht-tooltip" data-tippy-content="Quick View" href="javascript:void(0);" title="Wishlist">
-                    <i class="lastudioicon-search-zoom-in"></i>
-                  </a>
-                  <a class="action-wishlist ht-tooltip" data-tippy-content="Add to wishlist" href="shop-wishlist.html" title="Add to wishlist">
-                    <i class="lastudioicon-heart-2"></i>
-                  </a>
-                  <a class="action-compare ht-tooltip" data-tippy-content="Add to compare" href="shop-compare.html" title="Add to compare">
-                    <i class="lastudioicon-compare"></i>
-                  </a>
-                </div>
-                <div class="product-action-info action-info-style2">
-                  <div class="content-inner">
-                    <h4 class="title"><a href="shop-single-product.html">Double Breasted Blazer</a></h4>
-                    <div class="prices">
-                      <span class="price">£39.90</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End Product Item -->
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <!-- Start Product Item -->
-            <div class="product-item">
-              <div class="product-thumb">
-                <a href="shop-single-product.html">
-                  <img src="assets/img/shop/masonry/18.jpg" alt="Moren-Shop">
-                  <span class="bg-thumb" data-bg-img="assets/img/shop/masonry/19.jpg"></span>
-                  <span class="thumb-overlay overlay-black-7"></span>
-                </a>
-                <div class="product-action action-style2">
-                  <a class="action-cart ht-tooltip" data-tippy-content="Add to cart" href="shop-cart.html" title="Add to cart">
-                    <i class="lastudioicon-shopping-cart-3"></i>
-                  </a>
-                  <a class="action-quick-view ht-tooltip" data-tippy-content="Quick View" href="javascript:void(0);" title="Wishlist">
-                    <i class="lastudioicon-search-zoom-in"></i>
-                  </a>
-                  <a class="action-wishlist ht-tooltip" data-tippy-content="Add to wishlist" href="shop-wishlist.html" title="Add to wishlist">
-                    <i class="lastudioicon-heart-2"></i>
-                  </a>
-                  <a class="action-compare ht-tooltip" data-tippy-content="Add to compare" href="shop-compare.html" title="Add to compare">
-                    <i class="lastudioicon-compare"></i>
-                  </a>
-                </div>
-                <div class="product-action-info action-info-style2">
-                  <div class="content-inner">
-                    <h4 class="title"><a href="shop-single-product.html">Double Breasted Blazer</a></h4>
-                    <div class="prices">
-                      <span class="price">£39.90</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End Product Item -->
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <!-- Start Product Item -->
-            <div class="product-item">
-              <div class="product-thumb">
-                <a href="shop-single-product.html">
-                  <img src="assets/img/shop/masonry/20.jpg" alt="Moren-Shop">
-                  <span class="thumb-overlay overlay-black-7"></span>
-                </a>
-                <div class="product-action action-style2">
-                  <a class="action-cart ht-tooltip" data-tippy-content="Add to cart" href="shop-cart.html" title="Add to cart">
-                    <i class="lastudioicon-shopping-cart-3"></i>
-                  </a>
-                  <a class="action-quick-view ht-tooltip" data-tippy-content="Quick View" href="javascript:void(0);" title="Wishlist">
-                    <i class="lastudioicon-search-zoom-in"></i>
-                  </a>
-                  <a class="action-wishlist ht-tooltip" data-tippy-content="Add to wishlist" href="shop-wishlist.html" title="Add to wishlist">
-                    <i class="lastudioicon-heart-2"></i>
-                  </a>
-                  <a class="action-compare ht-tooltip" data-tippy-content="Add to compare" href="shop-compare.html" title="Add to compare">
-                    <i class="lastudioicon-compare"></i>
-                  </a>
-                </div>
-                <div class="product-action-info action-info-style2">
-                  <div class="content-inner">
-                    <h4 class="title"><a href="shop-single-product.html">Double Crossed Choker Necklace</a></h4>
-                    <div class="prices">
-                      <span class="price">£39.90</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End Product Item -->
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <!-- Start Product Item -->
-            <div class="product-item">
-              <div class="product-thumb">
-                <a href="shop-single-product.html">
-                  <img src="assets/img/shop/masonry/21.jpg" alt="Moren-Shop">
-                  <span class="thumb-overlay overlay-black-7"></span>
-                </a>
-                <div class="product-action action-style2">
-                  <a class="action-cart ht-tooltip" data-tippy-content="Add to cart" href="shop-cart.html" title="Add to cart">
-                    <i class="lastudioicon-shopping-cart-3"></i>
-                  </a>
-                  <a class="action-quick-view ht-tooltip" data-tippy-content="Quick View" href="javascript:void(0);" title="Wishlist">
-                    <i class="lastudioicon-search-zoom-in"></i>
-                  </a>
-                  <a class="action-wishlist ht-tooltip" data-tippy-content="Add to wishlist" href="shop-wishlist.html" title="Add to wishlist">
-                    <i class="lastudioicon-heart-2"></i>
-                  </a>
-                  <a class="action-compare ht-tooltip" data-tippy-content="Add to compare" href="shop-compare.html" title="Add to compare">
-                    <i class="lastudioicon-compare"></i>
-                  </a>
-                </div>
-                <div class="product-action-info action-info-style2">
-                  <div class="content-inner">
-                    <h4 class="title"><a href="shop-single-product.html">Enter My Orbit Earrings</a></h4>
-                    <div class="prices">
-                      <span class="price">£57.90</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End Product Item -->
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <!-- Start Product Item -->
-            <div class="product-item">
-              <div class="product-thumb">
-                <a href="shop-single-product.html">
-                  <img src="assets/img/shop/masonry/22.jpg" alt="Moren-Shop">
-                  <span class="thumb-overlay overlay-black-7"></span>
-                </a>
-                <div class="product-action action-style2">
-                  <a class="action-cart ht-tooltip" data-tippy-content="Add to cart" href="shop-cart.html" title="Add to cart">
-                    <i class="lastudioicon-shopping-cart-3"></i>
-                  </a>
-                  <a class="action-quick-view ht-tooltip" data-tippy-content="Quick View" href="javascript:void(0);" title="Wishlist">
-                    <i class="lastudioicon-search-zoom-in"></i>
-                  </a>
-                  <a class="action-wishlist ht-tooltip" data-tippy-content="Add to wishlist" href="shop-wishlist.html" title="Add to wishlist">
-                    <i class="lastudioicon-heart-2"></i>
-                  </a>
-                  <a class="action-compare ht-tooltip" data-tippy-content="Add to compare" href="shop-compare.html" title="Add to compare">
-                    <i class="lastudioicon-compare"></i>
-                  </a>
-                </div>
-                <div class="product-action-info action-info-style2">
-                  <div class="content-inner">
-                    <h4 class="title"><a href="shop-single-product.html">Golden Fish Necklace</a></h4>
-                    <div class="prices">
-                      <span class="price">£48.00</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End Product Item -->
-          </div>
-          <div class="masonry-btn">
-            <a class="btn-theme btn-border" href="shop.html">Load More Products</a>
           </div>
         </div>
       </div>
-    </section>
+    </div>
     <!--== End Products Area Wrapper ==-->
   </main>
 
+ 
+  
+
+
   <?php include('footer.php') ?>
-
   <?php include('sidebar.php') ?>
-
 <!--=======================Javascript============================-->
 
 <!--=== Modernizr Min Js ===-->

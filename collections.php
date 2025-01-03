@@ -133,9 +133,7 @@
                       <div class="product-info info-style2">
                         <div class="content-inner">                  
                           <h4 class="title"><a href="collectionview.php">Believer Delicate Earrings</a></h4>
-                          <div class="prices">
-                            <span class="price">£69.00</span>
-                          </div>
+                         
                         </div>
                       </div>
                     </div>
@@ -154,9 +152,7 @@
                       <div class="product-info info-style2">
                         <div class="content-inner">                  
                           <h4 class="title"><a href="collectionview.php">Believer Delicate Earrings</a></h4>
-                          <div class="prices">
-                            <span class="price">£39.90</span>
-                          </div>
+                         
                         </div>
                       </div>
                     </div>
@@ -175,9 +171,7 @@
                       <div class="product-info info-style2">
                         <div class="content-inner">                  
                           <h4 class="title"><a href="shop-single-product.html">Black & Gold Forever Double Choker Necklace</a></h4>
-                          <div class="prices">
-                            <span class="price">£39.90</span>
-                          </div>
+                         
                         </div>
                       </div>
                     </div>
