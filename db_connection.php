@@ -1,13 +1,12 @@
 <?php
-// Database connection details
-$host = "localhost";      // Database host
-$username = "root";       // Database username
-$password = "";           // Database password
-$database = "goodluck_db"; // Database name
-
-// Create a connection
-$conn = new mysqli($host, $username, $password, $database);
+$servername = "localhost";
+$username = "markeemx_samudrawavesuser"; 
+$password = "^-wb@8{1?6qT"; 
+$dbname = "markeemx_samudrawaves";
 
 
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-// Close the connection (optiona
+
+?>
+
