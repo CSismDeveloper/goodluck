@@ -25,7 +25,7 @@
     <!--== lastudioIcons CSS ==-->
     <link href="assets/css/lastudioIcons.css" rel="stylesheet">
     <!--== Animate CSS ==-->
-    <link href="assets/css/animate.css" rel="stylesheet">
+    <!-- <link href="assets/css/animate.css" rel="stylesheet"> -->
     <!--== Aos CSS ==-->
     <link href="assets/css/aos.css" rel="stylesheet">
     <!--== FancyBox CSS ==-->
@@ -41,6 +41,81 @@
 
 </head>
 
+    <style>
+       /* Enhanced Modal Styling */
+       .modal-content {
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            border: none;
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, #f320a2, #950469);
+            color: #fff;
+            padding: 20px;
+        }
+
+        .modal-title {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .modal-body {
+            padding: 30px;
+            background-color: #f9f9f9;
+        }
+
+        .form-control {
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: #f320a2;
+            box-shadow: 0 0 8px rgba(243, 32, 162, 0.4);
+        }
+
+        .form-group {
+            margin-bottom: 20px; /* Add space between input fields */
+            text-align: center;
+        }
+
+        .btn-theme {
+            background: #f320a2;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .btn-theme:hover {
+            background: #c81787;
+            box-shadow: 0 5px 15px rgba(243, 32, 162, 0.5);
+        }
+
+        /* Center button and adjust spacing */
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 576px) {
+            .modal-dialog {
+                margin: 20px;
+            }
+        }
+    </style>
 <body>
 
 <!--wrapper start-->
@@ -557,7 +632,7 @@ $conn->close();
     <!--== End Video Divider Area Wrapper ==-->
 
     <!--== Start Trends Social Area Wrapper ==-->
-    
+    <?php include('popup.php') ?>
   </main>
 
   <?php include('footer.php') ?>
