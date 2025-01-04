@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 header('Content-Type: application/json');
 
 include('db_connection.php');
@@ -24,6 +27,7 @@ if (empty($name) || empty($email) || empty($message)) {
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     echo json_encode(['success' => false, 'error' => 'Invalid email format.']);
     exit();
+
 }
 
 // Prepare and bind
