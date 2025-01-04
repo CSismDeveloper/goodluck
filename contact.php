@@ -75,40 +75,41 @@
         <div class="row">
           <div class=" col-lg-7">
             <div class="contact-form">
-              <form class="contact-form-wrapper form-style" id="contact-form" action="http://whizthemes.com/mail-php/raju/arden/mail.php" method="post">
-                <div class="row">
-                  <div class="col-lg-12">
-                    <div class="section-title">
-                      <h2 class="title">Contact us for any questions</h2>
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="form-group">
-                      <input class="form-control" type="text" name="con_name" placeholder="Name*">
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="form-group">
-                      <input class="form-control" type="email" name="con_email" placeholder="Email*">
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="form-group">
-                      <input class="form-control" type="text" name="con_phone" placeholder="Phone Number">
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="form-group mb-0">
-                      <textarea class="form-control textarea" name="con_message" placeholder="How can we help?"></textarea>
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="form-group mb-0">
-                      <button class="btn btn-theme btn-black" type="submit">Send Message</button>
-                    </div>
-                  </div>
-                </div>
-              </form>
+            <form class="contact-form-wrapper form-style" id="contact-form" action="insertcontact.php" method="post">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="section-title">
+                <h2 class="title">Contact us for any questions</h2>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <input class="form-control" type="text" name="con_name" placeholder="Name*" oninput="validateName(this)" required>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <input class="form-control" type="email" name="con_email" placeholder="Email*" required>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <input class="form-control" type="text" name="con_phone" placeholder="Phone Number" oninput="validatePhoneNumber(this)">
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group mb-0">
+                <textarea class="form-control textarea" name="con_message" placeholder="How can we help?" oninput="validateMessage(this)" required></textarea>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group mb-0">
+                <button class="btn btn-theme btn-black" type="submit">Send Message</button>
+            </div>
+        </div>
+    </div>
+</form>
+
               <!-- Message Notification -->
               <div class="form-message"></div>
             </div>
@@ -179,7 +180,85 @@ Gala No 126, Vora Industrial Estate No 4, 1st Floor, Premises Co-Op Hsc Soc Ltd,
 
 <?php include('sidebar.php') ?>
 <!--=======================Javascript============================-->
+<!-- Include SweetAlert2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script>
+// Form submission handling with SweetAlert
+document.getElementById('contact-form').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent default form submission
 
+    // Show loading alert
+    Swal.fire({
+        title: 'Submitting...',
+        text: 'Please wait while your inquiry is being submitted.',
+        icon: 'info',
+        allowOutsideClick: false,
+        showConfirmButton: false,
+        willOpen: () => {
+            Swal.showLoading();
+        }
+    });
+
+    // Create a FormData object
+    const formData = new FormData(this);
+
+    // Send the form data using fetch
+    fetch('insertcontact.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        Swal.close(); // Close the loading alert
+
+        if (data.success) {
+            // Show success message
+            Swal.fire({
+                icon: 'success',
+                title: 'Message Sent',
+                text: 'We will contact you soon!',
+                timer: 2000,
+                showConfirmButton: false
+            });
+            // Reset the form
+            document.getElementById('contact-form').reset();
+        } else {
+            // Show error message
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: data.error || 'Something went wrong. Please try again.',
+                timer: 2000,
+                showConfirmButton: false
+            });
+        }
+    })
+    .catch(error => {
+        Swal.close(); // Close the loading alert
+        console.error('Error:', error);
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'An unexpected error occurred.',
+            timer: 2000,
+            showConfirmButton: false
+        });
+    });
+});
+
+// Input validation functions
+function validatePhoneNumber(input) {
+    input.value = input.value.replace(/[^0-9]/g, '').slice(0, 10);
+}
+
+function validateName(input) {
+    input.value = input.value.replace(/[^0-9a-zA-Z,. ]/g, '');
+}
+
+function validateMessage(input) {
+    input.value = input.value.replace(/[^0-9a-zA-Z,. ]/g, '');
+}
+</script>
 <!--=== Modernizr Min Js ===-->
 <script src="assets/js/modernizr.js"></script>
 <!--=== jQuery Min Js ===-->
