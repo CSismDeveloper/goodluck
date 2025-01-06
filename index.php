@@ -15,6 +15,7 @@
     <link href="../../css?family=Abril+Fatface:400" rel="stylesheet">
     <link href="../../css-1?family=Montserrat:300,400,400i,500,600,700,900,900i" rel="stylesheet">
     <link href="../../css-2?family=Poppins:300,300i,400,400i,500,600,700,900,900i" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
     <!--== Bootstrap CSS ==-->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -51,9 +52,10 @@
         }
 
         .modal-header {
-            background: linear-gradient(135deg, #f320a2, #950469);
+            background: #fff;
             color: #fff;
-            padding: 20px;
+          
+            padding: 20px 30px 20px 30px;
         }
 
         .modal-title {
@@ -284,7 +286,7 @@
         <div class="row">
           <div class="col-md-8 col-lg-6 m-auto">
             <div class="section-title text-center" data-aos="fade-up" data-aos-duration="1000">
-              <h2 class="title">Our Products</h2>
+              <h2 class="title">OUR PRODUCTS</h2>
               <h5 class="subtitle">COLLECTION 2025</h5>
             </div>
           </div>
@@ -362,7 +364,7 @@
     <!--== End Products Area Wrapper ==-->
 
     <!--== Start Category Area Wrapper ==-->
-    <section class="category-area category-default-area">
+    <!-- <section class="category-area category-default-area">
       <div class="container-fluid xs-pr-15 xs-pl-15 p-0" data-aos="fade-up" data-aos-duration="1200">
         <div class="row row-gutter-6 masonry-grid category-masonry-style1">
           <div class="masonry-item">
@@ -454,11 +456,11 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!--== End Category Area Wrapper ==-->
 
     <!--== Start Category Slider Area Wrapper ==-->
-    <section class="category-area category-slider-area">
+    <!-- <section class="category-area category-slider-area">
       <div class="container-fluid pl-xs-15 pr-xs-15 p-0">
         <div class="row">
           <div class="col-md-12">
@@ -536,14 +538,14 @@
                     </div>
                   </div>
                 </div>
-                <!-- Add Arrows -->
+               
                 <div class="swiper-button-next"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!--== End Category Slider Area Wrapper ==-->
 
     <!--== Start Products Area Wrapper ==-->
@@ -611,10 +613,11 @@ $conn->close();
           <div class="col-md-12">
             <div class="divider-about-content">
               <div class="divider-content" data-aos="fade-up" data-aos-duration="1000" >
-                <span>About Us</span>
+                <!-- <span>About Us</span> -->
                 <img class="logo-divider" src="assets/img/logo.png" alt="Logo" style="filter:invert(1)">
-                <p>Liber adolescens eos cu. Eu vix habeo rebum elaboraret, ei usu vero ullum. Eam id nobis deleniti persecuti, mazim habemus repudiare ea vim. Ea iriure commune inciderint.</p>
-                <a href="about.html" class="btn-theme btn-black btn-border">Read more</a>
+                <p>The Goodluck Bra Cup offers unmatched comfort and support. Designed with premium materials, it ensures a perfect fit for every occasion. Experience confidence and elegance with our innovative design, crafted to complement your natural shape. Your perfect companion for all-day wear.</p>
+
+                <a href="about.php" class="btn-theme btn-black btn-border">Read more</a>
               </div>
               <div class="video-content" data-aos="fade-up" data-aos-duration="1000">
                 <div class="thumb">

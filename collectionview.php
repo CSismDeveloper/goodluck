@@ -54,13 +54,13 @@
   
   <main class="main-content">
     <!--== Start Page Title Area ==-->
-    <section class="page-title-area bg-img" data-bg-img="assets/img/photos/bg-page1.jpg" style="opacity:0">
+    <section class="page-title-area bg-img mt-80" data-bg-img="assets/img/photos/bg-page3.jpg" style="background: #f320a2;">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
             <div class="page-title-content">
-              <h2 class="title">Shop Fullwidth</h2>
-              <div class="bread-crumbs"><a href="index.html">Home<span class="breadcrumb-sep">></span></a><span class="active">Shop</span></div>
+              <h2 class="title">Collection </h2>
+              <div class="bread-crumbs"><a href="index.php">Home<span class="breadcrumb-sep">></span></a><span class="active">Collection</span></div>
             </div>
           </div>
         </div>
@@ -80,22 +80,22 @@
                 </div>
               </div>
               <div class="shop-toolbar-right">
-                <div class="product-sorting-menu product-view-count">
+                <!-- <div class="product-sorting-menu product-view-count">
                   <span class="current">Show 12 <i class="lastudioicon-down-arrow"></i></span>
                   <ul>
                     <li class="active"><a href="shop.html" class="active">Show 12</a></li>
                     <li><a href="shop.html">Show 15</a></li>
                     <li><a href="shop.html">Show 30</a></li>
                   </ul>
-                </div>
-                <div class="product-sorting-menu product-view-count">
+                </div> -->
+                <!-- <div class="product-sorting-menu product-view-count">
                   <span class="current">Filters <i class="lastudioicon-down-arrow"></i></span>
                   <ul>
                     <li class="active"><a href="shop.html" class="active">Filters</a></li>
                     <li><a href="shop.html">Categories</a></li>
                     <li><a href="shop.html">Tags</a></li>
                   </ul>
-                </div>
+                </div> -->
                 <div class="product-sorting-menu product-sorting">
                   <span class="current">Sort by Default <i class="lastudioicon-down-arrow"></i></span>
                   <ul>
@@ -107,14 +107,14 @@
                     <li><a href="shop.html">Sort by Price: <i class="lastudioicon-arrow-down"></i></a></li>
                   </ul>
                 </div>
-                <div class="product-view-mode">
+                <!-- <div class="product-view-mode">
                   <nav>
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
                       <button class="nav-link" id="nav-list-tab" data-bs-toggle="tab" data-bs-target="#nav-list" type="button" role="tab" aria-controls="nav-list" aria-selected="false"><i class="lastudioicon-list-bullet-2"></i></button>
                       <button class="nav-link active" id="nav-grid-tab" data-bs-toggle="tab" data-bs-target="#nav-grid" type="button" role="tab" aria-controls="nav-grid" aria-selected="true"><i class="lastudioicon-microsoft"></i></button>
                     </div>
                   </nav>
-                </div>
+                </div> -->
               </div>
             </div>
             <div class="tab-content" id="nav-tabContent">

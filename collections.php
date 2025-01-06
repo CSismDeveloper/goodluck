@@ -54,13 +54,13 @@
   
   <main class="main-content">
     <!--== Start Page Title Area ==-->
-    <section class="page-title-area bg-img" data-bg-img="assets/img/photos/bg-page1.jpg"style="opacity:0;">
+    <section class="page-title-area bg-img mt-80" data-bg-img="assets/img/photos/bg-page3.jpg" style="background: #f320a2;">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
             <div class="page-title-content">
-              <h2 class="title">Shop Fullwidth</h2>
-              <div class="bread-crumbs"><a href="index.html">Home<span class="breadcrumb-sep">></span></a><span class="active">Shop</span></div>
+              <h2 class="title">Collection </h2>
+              <div class="bread-crumbs"><a href="index.php">Home<span class="breadcrumb-sep">></span></a><span class="active">Collection</span></div>
             </div>
           </div>
         </div>
@@ -125,14 +125,14 @@
                     <div class="product-item">
                       <div class="product-thumb">
                         <a href="collectionview.php">
-                          <img src="assets/img/shop/13.jpg" alt="Moren-Shop">
+                          <img src="assets/img/slider/slider6.png" alt="Moren-Shop">
                           <span class="thumb-overlay"></span>
                         </a>
                        
                       </div>
                       <div class="product-info info-style2">
                         <div class="content-inner">                  
-                          <h4 class="title"><a href="collectionview.php">Believer Delicate Earrings</a></h4>
+                          <h4 class="title"><a href="collectionview.php">Bra Cups</a></h4>
                          
                         </div>
                       </div>
@@ -144,14 +144,14 @@
                     <div class="product-item">
                       <div class="product-thumb">
                         <a href="collectionview.php">
-                          <img src="assets/img/shop/19.jpg" alt="Moren-Shop">
+                          <img src="assets/img/slider/picture4.png" alt="Moren-Shop">
                           <span class="thumb-overlay"></span>
                         </a>
                        
                       </div>
                       <div class="product-info info-style2">
                         <div class="content-inner">                  
-                          <h4 class="title"><a href="collectionview.php">Believer Delicate Earrings</a></h4>
+                          <h4 class="title"><a href="collectionview.php">Polyester Bra Cup</a></h4>
                          
                         </div>
                       </div>
@@ -163,14 +163,14 @@
                     <div class="product-item">
                       <div class="product-thumb">
                         <a href="collectionview.php">
-                          <img src="assets/img/shop/20.jpg" alt="Moren-Shop">
+                          <img src="assets/img/slider/picture1.png" alt="Moren-Shop">
                           <span class="thumb-overlay"></span>
                         </a>
                    
                       </div>
                       <div class="product-info info-style2">
                         <div class="content-inner">                  
-                          <h4 class="title"><a href="shop-single-product.html">Black & Gold Forever Double Choker Necklace</a></h4>
+                          <h4 class="title"><a href="shop-single-product.html">Cotton Bra Cup</a></h4>
                          
                         </div>
                       </div>

@@ -55,11 +55,22 @@
   
   <main class="main-content">
     <!--== Start Page Title Area ==-->
-   
+    <section class="page-title-area bg-img mt-80" data-bg-img="assets/img/photos/bg-page3.jpg" style="background: #f320a2;">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-title-content">
+              <h2 class="title">About Us</h2>
+              <div class="bread-crumbs"><a href="index.php">Home<span class="breadcrumb-sep">></span></a><span class="active">About Us</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!--== End Page Title Area ==-->
 
     <!--== Start Video Divider Area Wrapper ==-->
-    <section class="divider-area divider-about-area-style2 mt-100">
+    <section class="divider-area divider-about-area-style2 mt-20">
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-lg-7">

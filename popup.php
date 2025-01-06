@@ -1,47 +1,57 @@
 <!-- Modal HTML -->
-<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+<div class="modal fade " id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <!-- Contact Form -->
-                <form class="contact-form-wrapper form-style" id="contact-form" action="insertcontact.php" method="post">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <input class="form-control" type="text" name="con_name" placeholder="Name*" oninput="validateName(this)" required>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <input class="form-control" type="email" name="con_email" placeholder="Email*" required>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <input class="form-control" type="text" name="con_phone" placeholder="Phone Number" oninput="validatePhoneNumber(this)">
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-group mb-0">
-                                <textarea class="form-control textarea" name="con_message" placeholder="How can we help?" oninput="validateMessage(this)" required></textarea>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-group mb-0">
-                                <button class="btn btn-theme btn-black" type="submit">Send Message</button>
-                            </div>
-                        </div>
+            <div class="row g-0">
+                <!-- Left Image Column -->
+                <div class="col-md-5" style="padding:0px">
+                    <img src="assets/img/slider/slider1.jpg" alt="Contact Us" class="img-fluid h-100 hh33" style="object-fit: cover;">
+                </div>
+                <!-- Right Form Column -->
+                <div class="col-md-7 col-12 hh22"  style="padding:0px" >
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                </form>
-                <!-- End of Contact Form -->
+                    <div class="modal-body">
+                        <!-- Contact Form -->
+                        <form class="contact-form-wrapper form-style" id="contact-form" action="insertcontact.php" method="post">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" name="con_name" placeholder="Name*" oninput="validateName(this)" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input class="form-control" type="email" name="con_email" placeholder="Email*" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" name="con_phone" placeholder="Phone Number" oninput="validatePhoneNumber(this)">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group mb-0">
+                                        <textarea class="form-control textarea" name="con_message" placeholder="How can we help?" oninput="validateMessage(this)" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group mb-0">
+                                        <button class="btn btn-theme btn-black" type="submit">Send Message</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- End of Contact Form -->
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
 
 <!-- Include SweetAlert2 JS -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>

@@ -1,3 +1,5 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  
   <!--== Start Header Wrapper ==-->
   <header class="header-area header-default header-style2 header-transparent sticky-header">
     <div class="container-fluid">

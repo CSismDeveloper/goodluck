@@ -49,5 +49,5 @@
 	<a class="hh1" href="https://wa.me/+918046045100?text=Hey%20hi%2C%20we%20are%20looking%20for%20a%20villa.%20How%20can%20we%20reach%20out%20to%20you%3F" 
    target="_blank" 
    >
-   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 30px; height: 30px;">
+   <i class="bi bi-whatsapp"></i>
 </a>

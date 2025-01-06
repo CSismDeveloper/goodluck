@@ -55,13 +55,13 @@
   
   <main class="main-content">
     <!--== Start Page Title Area ==-->
-    <section class="page-title-area bg-img" data-bg-img="assets/img/photos/bg-page3.jpg" style="opacity:0;">
+    <section class="page-title-area bg-img mt-80" data-bg-img="assets/img/photos/bg-page3.jpg" style="background: #f320a2;">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
             <div class="page-title-content">
               <h2 class="title">Contact Us</h2>
-              <div class="bread-crumbs"><a href="index.html">Home<span class="breadcrumb-sep">></span></a><span class="active">Contact Us</span></div>
+              <div class="bread-crumbs"><a href="index.php">Home<span class="breadcrumb-sep">></span></a><span class="active">Contact Us</span></div>
             </div>
           </div>
         </div>

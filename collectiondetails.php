@@ -59,17 +59,18 @@
   
   <main class="main-content site-wrapper-reveal">
     <!--== Start Page Title Area ==-->
-    <div class="page-title-area page-title-area2" style="opacity:0">
+    <section class="page-title-area bg-img mt-80" data-bg-img="assets/img/photos/bg-page3.jpg" style="background: #f320a2;">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
-            <div class="page-title-content content-style-2">
-              <div class="bread-crumbs"><a href="index.html">Home<span class="breadcrumb-sep">></span></a><a href="index.html">Uncategorized<span class="breadcrumb-sep">></span></a><span class="active">Product Simple</span></div>
+            <div class="page-title-content">
+              <h2 class="title">Collection </h2>
+              <div class="bread-crumbs"><a href="index.php">Home<span class="breadcrumb-sep">></span></a><span class="active">Collection</span></div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
     <!--== End Page Title Area ==-->
 
     <!--== Start Shop Area ==-->
