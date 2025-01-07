@@ -1,0 +1,106 @@
+[06-Jan-2025 04:30:28 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home4/markeemx/demo.samudrawavesresort.com/goodluck/db_connection.php:16
+Stack trace:
+#0 /home4/markeemx/demo.samudrawavesresort.com/goodluck/db_connection.php(16): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'goodluck_db')
+#1 /home4/markeemx/demo.samudrawavesresort.com/goodluck/index.php(564): include('/home4/markeemx...')
+#2 {main}
+  thrown in /home4/markeemx/demo.samudrawavesresort.com/goodluck/db_connection.php on line 16
+[06-Jan-2025 04:30:41 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home4/markeemx/demo.samudrawavesresort.com/goodluck/db_connection.php:16
+Stack trace:
+#0 /home4/markeemx/demo.samudrawavesresort.com/goodluck/db_connection.php(16): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'goodluck_db')
+#1 /home4/markeemx/demo.samudrawavesresort.com/goodluck/index.php(564): include('/home4/markeemx...')
+#2 {main}
+  thrown in /home4/markeemx/demo.samudrawavesresort.com/goodluck/db_connection.php on line 16
+[06-Jan-2025 04:30:42 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home4/markeemx/demo.samudrawavesresort.com/goodluck/db_connection.php:16
+Stack trace:
+#0 /home4/markeemx/demo.samudrawavesresort.com/goodluck/db_connection.php(16): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'goodluck_db')
+#1 /home4/markeemx/demo.samudrawavesresort.com/goodluck/index.php(564): include('/home4/markeemx...')
+#2 {main}
+  thrown in /home4/markeemx/demo.samudrawavesresort.com/goodluck/db_connection.php on line 16
+[06-Jan-2025 04:30:42 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home4/markeemx/demo.samudrawavesresort.com/goodluck/db_connection.php:16
+Stack trace:
+#0 /home4/markeemx/demo.samudrawavesresort.com/goodluck/db_connection.php(16): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'goodluck_db')
+#1 /home4/markeemx/demo.samudrawavesresort.com/goodluck/index.php(564): include('/home4/markeemx...')
+#2 {main}
+  thrown in /home4/markeemx/demo.samudrawavesresort.com/goodluck/db_connection.php on line 16
+[06-Jan-2025 04:30:42 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home4/markeemx/demo.samudrawavesresort.com/goodluck/db_connection.php:16
+Stack trace:
+#0 /home4/markeemx/demo.samudrawavesresort.com/goodluck/db_connection.php(16): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'goodluck_db')
+#1 /home4/markeemx/demo.samudrawavesresort.com/goodluck/index.php(564): include('/home4/markeemx...')
+#2 {main}
+  thrown in /home4/markeemx/demo.samudrawavesresort.com/goodluck/db_connection.php on line 16
+[06-Jan-2025 06:36:10 America/Chicago] PHP Warning:  Undefined array key "id" in /home4/markeemx/demo.samudrawavesresort.com/goodluck/collectiondetails.php on line 82
+[06-Jan-2025 06:36:10 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in /home4/markeemx/demo.samudrawavesresort.com/goodluck/collectiondetails.php:84
+Stack trace:
+#0 /home4/markeemx/demo.samudrawavesresort.com/goodluck/collectiondetails.php(84): mysqli->query('SELECT * FROM p...')
+#1 {main}
+  thrown in /home4/markeemx/demo.samudrawavesresort.com/goodluck/collectiondetails.php on line 84
+[06-Jan-2025 06:36:29 America/Chicago] PHP Warning:  Undefined array key "id" in /home4/markeemx/demo.samudrawavesresort.com/goodluck/collectiondetails.php on line 82
+[06-Jan-2025 06:36:29 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in /home4/markeemx/demo.samudrawavesresort.com/goodluck/collectiondetails.php:84
+Stack trace:
+#0 /home4/markeemx/demo.samudrawavesresort.com/goodluck/collectiondetails.php(84): mysqli->query('SELECT * FROM p...')
+#1 {main}
+  thrown in /home4/markeemx/demo.samudrawavesresort.com/goodluck/collectiondetails.php on line 84
+[06-Jan-2025 06:54:45 America/Chicago] PHP Warning:  Undefined array key "id" in /home4/markeemx/demo.samudrawavesresort.com/goodluck/collectiondetails.php on line 82
+[06-Jan-2025 06:54:45 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in /home4/markeemx/demo.samudrawavesresort.com/goodluck/collectiondetails.php:84
+Stack trace:
+#0 /home4/markeemx/demo.samudrawavesresort.com/goodluck/collectiondetails.php(84): mysqli->query('SELECT * FROM p...')
+#1 {main}
+  thrown in /home4/markeemx/demo.samudrawavesresort.com/goodluck/collectiondetails.php on line 84
+[06-Jan-2025 06:54:51 America/Chicago] PHP Warning:  Undefined array key "id" in /home4/markeemx/demo.samudrawavesresort.com/goodluck/collectiondetails.php on line 82
+[06-Jan-2025 06:54:51 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in /home4/markeemx/demo.samudrawavesresort.com/goodluck/collectiondetails.php:84
+Stack trace:
+#0 /home4/markeemx/demo.samudrawavesresort.com/goodluck/collectiondetails.php(84): mysqli->query('SELECT * FROM p...')
+#1 {main}
+  thrown in /home4/markeemx/demo.samudrawavesresort.com/goodluck/collectiondetails.php on line 84
+[06-Jan-2025 06:55:09 America/Chicago] PHP Warning:  Undefined array key "id" in /home4/markeemx/demo.samudrawavesresort.com/goodluck/collectiondetails.php on line 82
+[06-Jan-2025 06:55:09 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in /home4/markeemx/demo.samudrawavesresort.com/goodluck/collectiondetails.php:84
+Stack trace:
+#0 /home4/markeemx/demo.samudrawavesresort.com/goodluck/collectiondetails.php(84): mysqli->query('SELECT * FROM p...')
+#1 {main}
+  thrown in /home4/markeemx/demo.samudrawavesresort.com/goodluck/collectiondetails.php on line 84
+[06-Jan-2025 06:56:45 America/Chicago] PHP Warning:  Undefined array key "id" in /home4/markeemx/demo.samudrawavesresort.com/goodluck/collectiondetails.php on line 82
+[06-Jan-2025 06:56:45 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in /home4/markeemx/demo.samudrawavesresort.com/goodluck/collectiondetails.php:84
+Stack trace:
+#0 /home4/markeemx/demo.samudrawavesresort.com/goodluck/collectiondetails.php(84): mysqli->query('SELECT * FROM p...')
+#1 {main}
+  thrown in /home4/markeemx/demo.samudrawavesresort.com/goodluck/collectiondetails.php on line 84
+[06-Jan-2025 07:17:38 America/Chicago] PHP Warning:  Undefined variable $con in /home4/markeemx/demo.samudrawavesresort.com/goodluck/index.php on line 297
+[06-Jan-2025 07:17:38 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home4/markeemx/demo.samudrawavesresort.com/goodluck/index.php:297
+Stack trace:
+#0 {main}
+  thrown in /home4/markeemx/demo.samudrawavesresort.com/goodluck/index.php on line 297
+[06-Jan-2025 07:17:38 America/Chicago] PHP Warning:  Undefined variable $con in /home4/markeemx/demo.samudrawavesresort.com/goodluck/index.php on line 297
+[06-Jan-2025 07:17:38 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home4/markeemx/demo.samudrawavesresort.com/goodluck/index.php:297
+Stack trace:
+#0 {main}
+  thrown in /home4/markeemx/demo.samudrawavesresort.com/goodluck/index.php on line 297
+[06-Jan-2025 07:17:39 America/Chicago] PHP Warning:  Undefined variable $con in /home4/markeemx/demo.samudrawavesresort.com/goodluck/index.php on line 297
+[06-Jan-2025 07:17:39 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home4/markeemx/demo.samudrawavesresort.com/goodluck/index.php:297
+Stack trace:
+#0 {main}
+  thrown in /home4/markeemx/demo.samudrawavesresort.com/goodluck/index.php on line 297
+[06-Jan-2025 07:17:39 America/Chicago] PHP Warning:  Undefined variable $con in /home4/markeemx/demo.samudrawavesresort.com/goodluck/index.php on line 297
+[06-Jan-2025 07:17:39 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home4/markeemx/demo.samudrawavesresort.com/goodluck/index.php:297
+Stack trace:
+#0 {main}
+  thrown in /home4/markeemx/demo.samudrawavesresort.com/goodluck/index.php on line 297
+[06-Jan-2025 07:18:48 America/Chicago] PHP Warning:  Undefined variable $con in /home4/markeemx/demo.samudrawavesresort.com/goodluck/index.php on line 298
+[06-Jan-2025 07:18:48 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home4/markeemx/demo.samudrawavesresort.com/goodluck/index.php:298
+Stack trace:
+#0 {main}
+  thrown in /home4/markeemx/demo.samudrawavesresort.com/goodluck/index.php on line 298
+[06-Jan-2025 07:18:51 America/Chicago] PHP Warning:  Undefined variable $con in /home4/markeemx/demo.samudrawavesresort.com/goodluck/index.php on line 298
+[06-Jan-2025 07:18:51 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home4/markeemx/demo.samudrawavesresort.com/goodluck/index.php:298
+Stack trace:
+#0 {main}
+  thrown in /home4/markeemx/demo.samudrawavesresort.com/goodluck/index.php on line 298
+[06-Jan-2025 07:19:40 America/Chicago] PHP Warning:  Undefined variable $con in /home4/markeemx/demo.samudrawavesresort.com/goodluck/index.php on line 298
+[06-Jan-2025 07:19:40 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home4/markeemx/demo.samudrawavesresort.com/goodluck/index.php:298
+Stack trace:
+#0 {main}
+  thrown in /home4/markeemx/demo.samudrawavesresort.com/goodluck/index.php on line 298
+[06-Jan-2025 07:19:40 America/Chicago] PHP Warning:  Undefined variable $con in /home4/markeemx/demo.samudrawavesresort.com/goodluck/index.php on line 298
+[06-Jan-2025 07:19:40 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home4/markeemx/demo.samudrawavesresort.com/goodluck/index.php:298
+Stack trace:
+#0 {main}
+  thrown in /home4/markeemx/demo.samudrawavesresort.com/goodluck/index.php on line 298

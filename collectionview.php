@@ -119,45 +119,62 @@
             </div>
             <div class="tab-content" id="nav-tabContent">
               <div class="tab-pane fade show active" id="nav-grid" role="tabpanel" aria-labelledby="nav-grid-tab">
-              <?php
+             <?php
 // Database Connection
 include('db_connection.php');
 
-// Fetch All Products
-$sql = "SELECT id, title, price, image1 FROM products";
-$result = $conn->query($sql);
+// Get the selected category from the URL parameter
+$category = isset($_GET['category']) ? $_GET['category'] : '';
+
+// Fetch Products Based on the Selected Category
+$sql = "SELECT id, title, price, image1 FROM products WHERE category = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("s", $category);
+$stmt->execute();
+$result = $stmt->get_result();
 ?>
 
-<div class="row row-gutter-60" data-aos="fade-up" data-aos-duration="1000">
-    <?php while ($row = $result->fetch_assoc()): ?>
-        <div class="col-sm-6 col-lg-4">
-            <!-- Start Product Item -->
-            <div class="product-item">
-                <div class="product-thumb">
-                    <a href="collectiondetails.php?id=<?= $row['id']; ?>">
-                        <img src="productimage/<?= $row['image1']; ?>" alt="<?= $row['title']; ?>">
-                        <span class="thumb-overlay"></span>
-                    </a>
-                </div>
-                <div class="product-info">
-                    <div class="content-inner">
-                        <h4 class="title"><a href="collectiondetails.php?id=<?= $row['id']; ?>"><?= $row['title']; ?></a></h4>
-                        <div class="prices">
-                            <span class="price"> ₹<?= $row['price']; ?></span>
+<div class="container">
+    <h2 class="text-center mb-4">Products in "<?= htmlspecialchars($category); ?>" Category</h2>
+    <div class="row row-gutter-60" data-aos="fade-up" data-aos-duration="1000">
+        <?php if ($result->num_rows > 0): ?>
+            <?php while ($row = $result->fetch_assoc()): ?>
+                <div class="col-sm-6 col-lg-4">
+                    <!-- Start Product Item -->
+                    <div class="product-item">
+                        <div class="product-thumb">
+                            <a href="collectiondetails.php?id=<?= $row['id']; ?>">
+                                <img src="productimage/<?= $row['image1']; ?>" alt="<?= htmlspecialchars($row['title']); ?>">
+                                <span class="thumb-overlay"></span>
+                            </a>
+                        </div>
+                        <div class="product-info">
+                            <div class="content-inner">
+                                <h4 class="title">
+                                    <a href="collectiondetails.php?id=<?= $row['id']; ?>"><?= htmlspecialchars($row['title']); ?></a>
+                                </h4>
+                                <div class="prices">
+                                    <span class="price"> ₹<?= $row['price']; ?></span>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <!-- End Product Item -->
                 </div>
+            <?php endwhile; ?>
+        <?php else: ?>
+            <div class="col-12">
+                <p class="text-center">No products found in the "<?= htmlspecialchars($category); ?>" category.</p>
             </div>
-            <!-- End Product Item -->
-        </div>
-    <?php endwhile; ?>
+        <?php endif; ?>
+    </div>
 </div>
-
 
 <?php
 // Close Database Connection
 $conn->close();
 ?>
+
               </div>
               
             </div>

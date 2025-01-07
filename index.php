@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -52,7 +52,7 @@
         }
 
         .modal-header {
-            background: #fff;
+            background:#f9f9f9;
             color: #fff;
           
             padding: 20px 30px 20px 30px;
@@ -292,72 +292,36 @@
           </div>
         </div>
         <div class="row row-gutter-60" data-aos="fade-up" data-aos-duration="1000">
-          <div class="col-sm-6 col-lg-4">
-            <!-- Start Product Item -->
-            <div class="product-item">
-              <div class="product-thumb">
-                <a href="collections.php">
-                  <img src="assets/img/slider/slider6.png" alt="Moren-Shop">
-                  <span class="bg-thumb" data-bg-img="assets/img/slider/slider6.png"></span>
-                  <span class="thumb-overlay"></span>
+        <?php
+include('db_connection.php');
+$sql = "SELECT  category, image1 FROM products group by category"; // Use DISTINCT to avoid duplicate categories
+$stmt = $conn->prepare($sql);
+$stmt->execute();
+$result = $stmt->get_result();
+while ($row = $result->fetch_assoc()) {
+?>
+    <div class="col-sm-6 col-lg-4">
+        <!-- Start Product Item -->
+        <div class="product-item">
+            <div class="product-thumb">
+                <a href="collectionview.php?category=<?= urlencode($row['category']); ?>"> <!-- Pass category as a query parameter -->
+                    <img src="productimage/<?= $row['image1']; ?>" alt="<?= $row['category']; ?>">
+                    <span class="bg-thumb" data-bg-img="productimage/<?= $row['image1']; ?>"></span>
+                    <span class="thumb-overlay"></span>
                 </a>
-                <div class="product-action">
-               
-                
-                </div>
-              </div>
-              <div class="product-info">
-                <div class="content-inner">                  
-                  <h4 class="title"><a href="collectionS.php">Bra Cups</a></h4>
-                 
-                </div>
-              
-              </div>
             </div>
-            <!-- End Product Item -->
-          </div>
-          <div class="col-sm-6 col-lg-4">
-            <!-- Start Product Item -->
-            <div class="product-item">
-              <div class="product-thumb">
-                <a href="collections.php">
-                  <img src="assets/img/slider/picture4.png" alt="Moren-Shop">
-                  <span class="bg-thumb" data-bg-img="assets/img/slider/picture4.png"></span>
-                  <span class="thumb-overlay"></span>
-                </a>
-               
-              </div>
-              <div class="product-info">
-                <div class="content-inner">                  
-                  <h4 class="title"><a href="collections.php">Polyester Bra Cup</a></h4>
-                  
+            <div class="product-info">
+                <div class="content-inner">
+                    <h4 class="title">
+                        <a href="collectionview.php?category=<?= urlencode($row['category']); ?>"><?= htmlspecialchars($row['category']); ?></a>
+                    </h4>
                 </div>
-               
-              </div>
             </div>
-            <!-- End Product Item -->
-          </div>
-          <div class="col-sm-6 col-lg-4">
-            <!-- Start Product Item -->
-            <div class="product-item">
-              <div class="product-thumb">
-                <a href="collections.php">
-                  <img src="assets/img/slider/picture1.png" alt="Moren-Shop">
-                  <span class="bg-thumb" data-bg-img="assets/img/slider/picture1.png"></span>
-                  <span class="thumb-overlay"></span>
-                </a>
-             
-              </div>
-              <div class="product-info">
-                <div class="content-inner">                  
-                  <h4 class="title"><a href="collections.php">Cotton Bra Cup</a></h4>
-                
-                </div>
-             
-              </div>
-            </div>
-            <!-- End Product Item -->
-          </div>
+        </div>
+        <!-- End Product Item -->
+    </div>
+<?php } ?>
+
         </div>
       </div>
     </section>

@@ -268,152 +268,58 @@ if ($result->num_rows > 0) {
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-12">
-            <div class="swiper-container product4-slider-container">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <!-- Start Product Item -->
-                  <div class="product-item">
-                    <div class="product-thumb">
-                      <a href="shop-single-product.html">
-                        <img src="assets/img/shop/9.jpg" alt="Moren-Shop">
-                        <span class="thumb-overlay"></span>
-                      </a>
-                      <div class="product-action action-style3">
-                        <a class="action-cart ht-tooltip" data-tippy-content="Add to cart" href="shop-cart.html" title="Add to cart">
-                          <i class="lastudioicon-shopping-cart-3"></i>
-                        </a>
-                        <a class="action-quick-view ht-tooltip" data-tippy-content="Quick View" href="javascript:void(0);" title="Wishlist">
-                          <i class="lastudioicon-search-zoom-in"></i>
-                        </a>
-                        <a class="action-wishlist ht-tooltip" data-tippy-content="Add to wishlist" href="shop-wishlist.html" title="Add to wishlist">
-                          <i class="lastudioicon-heart-2"></i>
-                        </a>
-                        <a class="action-compare ht-tooltip" data-tippy-content="Add to compare" href="shop-compare.html" title="Add to compare">
-                          <i class="lastudioicon-compare"></i>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="product-info info-style3">
-                      <div class="content-inner">                  
-                        <h4 class="title"><a href="shop-single-product.html">Printed surplice blouse</a></h4>
-                        <div class="prices">
-                          <span class="price">£17.90</span>
+      <?php
+// Database Connection
+include('db_connection.php');
+
+// Fetch All Products
+$sql = "SELECT id, title, price, image1 FROM products";
+$result = $conn->query($sql);
+?>
+
+<div class="row">
+    <div class="col-12">
+        <div class="swiper-container product4-slider-container">
+            <div class="swiper-wrapper">
+                <?php while ($row = $result->fetch_assoc()): ?>
+                    <div class="swiper-slide">
+                        <!-- Start Product Item -->
+                        <div class="product-item">
+                            <div class="product-thumb">
+                                <a href="collectiondetails.php?id=<?= $row['id']; ?>">
+                                    <img src="productimage/<?= $row['image1']; ?>" alt="<?= $row['title']; ?>">
+                                    <span class="thumb-overlay"></span>
+                                </a>
+                              
+                            </div>
+                            <div class="product-info info-style3">
+                                <div class="content-inner">
+                                    <h4 class="title">
+                                        <a href="collectiondetails.php?id=<?= $row['id']; ?>"><?= $row['title']; ?></a>
+                                    </h4>
+                                    <div class="prices">
+                                        <span class="price">₹<?= $row['price']; ?></span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                      </div>
+                        <!-- End Product Item -->
                     </div>
-                  </div>
-                  <!-- End Product Item -->
-                </div>
-                <div class="swiper-slide">
-                  <!-- Start Product Item -->
-                  <div class="product-item">
-                    <div class="product-thumb">
-                      <a href="shop-single-product.html">
-                        <img src="assets/img/shop/83.jpg" alt="Moren-Shop">
-                        <span class="bg-thumb" data-bg-img="assets/img/shop/84.jpg" style="background-image: url(&quot;assets/img/shop/d2-2.jpg&quot;);"></span>
-                        <span class="thumb-overlay"></span>
-                      </a>
-                      <div class="product-action action-style3">
-                        <a class="action-cart ht-tooltip" data-tippy-content="Add to cart" href="shop-cart.html" title="Add to cart">
-                          <i class="lastudioicon-shopping-cart-3"></i>
-                        </a>
-                        <a class="action-quick-view ht-tooltip" data-tippy-content="Quick View" href="javascript:void(0);" title="Wishlist">
-                          <i class="lastudioicon-search-zoom-in"></i>
-                        </a>
-                        <a class="action-wishlist ht-tooltip" data-tippy-content="Add to wishlist" href="shop-wishlist.html" title="Add to wishlist">
-                          <i class="lastudioicon-heart-2"></i>
-                        </a>
-                        <a class="action-compare ht-tooltip" data-tippy-content="Add to compare" href="shop-compare.html" title="Add to compare">
-                          <i class="lastudioicon-compare"></i>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="product-info info-style3">
-                      <div class="content-inner">                  
-                        <h4 class="title"><a href="shop-single-product.html">Double Breasted Blazer</a></h4>
-                        <div class="prices">
-                          <span class="price">£39.90</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- End Product Item -->
-                </div>
-                <div class="swiper-slide">
-                  <!-- Start Product Item -->
-                  <div class="product-item">
-                    <div class="product-thumb">
-                      <a href="shop-single-product.html">
-                        <img src="assets/img/shop/80.jpg" alt="Moren-Shop">
-                        <span class="bg-thumb" data-bg-img="assets/img/shop/81.jpg" style="background-image: url(&quot;assets/img/shop/d2-2.jpg&quot;);"></span>
-                        <span class="thumb-overlay"></span>
-                      </a>
-                      <div class="product-action action-style3">
-                        <a class="action-cart ht-tooltip" data-tippy-content="Add to cart" href="shop-cart.html" title="Add to cart">
-                          <i class="lastudioicon-shopping-cart-3"></i>
-                        </a>
-                        <a class="action-quick-view ht-tooltip" data-tippy-content="Quick View" href="javascript:void(0);" title="Wishlist">
-                          <i class="lastudioicon-search-zoom-in"></i>
-                        </a>
-                        <a class="action-wishlist ht-tooltip" data-tippy-content="Add to wishlist" href="shop-wishlist.html" title="Add to wishlist">
-                          <i class="lastudioicon-heart-2"></i>
-                        </a>
-                        <a class="action-compare ht-tooltip" data-tippy-content="Add to compare" href="shop-compare.html" title="Add to compare">
-                          <i class="lastudioicon-compare"></i>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="product-info info-style3">
-                      <div class="content-inner">                  
-                        <h4 class="title"><a href="shop-single-product.html">Product Variable</a></h4>
-                        <div class="prices">
-                          <span class="price">£39.90</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- End Product Item -->
-                </div>
-                <div class="swiper-slide">
-                  <!-- Start Product Item -->
-                  <div class="product-item">
-                    <div class="product-thumb">
-                      <a href="shop-single-product.html">
-                        <img src="assets/img/shop/3.jpg" alt="Moren-Shop">
-                        <span class="thumb-overlay"></span>
-                      </a>
-                      <div class="product-action action-style3">
-                        <a class="action-cart ht-tooltip" data-tippy-content="Add to cart" href="shop-cart.html" title="Add to cart">
-                          <i class="lastudioicon-shopping-cart-3"></i>
-                        </a>
-                        <a class="action-quick-view ht-tooltip" data-tippy-content="Quick View" href="javascript:void(0);" title="Wishlist">
-                          <i class="lastudioicon-search-zoom-in"></i>
-                        </a>
-                        <a class="action-wishlist ht-tooltip" data-tippy-content="Add to wishlist" href="shop-wishlist.html" title="Add to wishlist">
-                          <i class="lastudioicon-heart-2"></i>
-                        </a>
-                        <a class="action-compare ht-tooltip" data-tippy-content="Add to compare" href="shop-compare.html" title="Add to compare">
-                          <i class="lastudioicon-compare"></i>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="product-info info-style3">
-                      <div class="content-inner">                  
-                        <h4 class="title"><a href="shop-single-product.html">Short lilac ruffled dress</a></h4>
-                        <div class="prices">
-                          <span class="price">£29.90</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- End Product Item -->
-                </div>
-              </div>
+                <?php endwhile; ?>
             </div>
-          </div>
         </div>
+    </div>
+</div>
+
+<div class="col-md-12 text-center">
+    <a href="collections.php" class="btn-theme btn-black btn-border btn-padding mt-20">View more</a>
+</div>
+
+<?php
+// Close Database Connection
+$conn->close();
+?>
+
       </div>
     </section>
     <!--== End Products Area Wrapper ==-->

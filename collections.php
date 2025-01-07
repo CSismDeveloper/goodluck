@@ -119,69 +119,38 @@
             </div> -->
             <div class="tab-content" id="nav-tabContent">
               <div class="tab-pane fade show active" id="nav-grid" role="tabpanel" aria-labelledby="nav-grid-tab">
-                <div class="row row-gutter-60 product-items-style4">
-                  <div class="col-sm-6 col-md-4">
-                    <!-- Start Product Item -->
-                    <div class="product-item">
-                      <div class="product-thumb">
-                        <a href="collectionview.php">
-                          <img src="assets/img/slider/slider6.png" alt="Moren-Shop">
-                          <span class="thumb-overlay"></span>
-                        </a>
-                       
-                      </div>
-                      <div class="product-info info-style2">
-                        <div class="content-inner">                  
-                          <h4 class="title"><a href="collectionview.php">Bra Cups</a></h4>
-                         
-                        </div>
-                      </div>
-                    </div>
-                    <!-- End Product Item -->
-                  </div>
-                  <div class="col-sm-6 col-md-4">
-                    <!-- Start Product Item -->
-                    <div class="product-item">
-                      <div class="product-thumb">
-                        <a href="collectionview.php">
-                          <img src="assets/img/slider/picture4.png" alt="Moren-Shop">
-                          <span class="thumb-overlay"></span>
-                        </a>
-                       
-                      </div>
-                      <div class="product-info info-style2">
-                        <div class="content-inner">                  
-                          <h4 class="title"><a href="collectionview.php">Polyester Bra Cup</a></h4>
-                         
-                        </div>
-                      </div>
-                    </div>
-                    <!-- End Product Item -->
-                  </div>
-                  <div class="col-sm-6 col-md-4">
-                    <!-- Start Product Item -->
-                    <div class="product-item">
-                      <div class="product-thumb">
-                        <a href="collectionview.php">
-                          <img src="assets/img/slider/picture1.png" alt="Moren-Shop">
-                          <span class="thumb-overlay"></span>
-                        </a>
-                   
-                      </div>
-                      <div class="product-info info-style2">
-                        <div class="content-inner">                  
-                          <h4 class="title"><a href="shop-single-product.html">Cotton Bra Cup</a></h4>
-                         
-                        </div>
-                      </div>
-                    </div>
-                    <!-- End Product Item -->
-                  </div>
-                 
-              
-               
-              
+              <div class="row row-gutter-60" data-aos="fade-up" data-aos-duration="1000">
+        <?php
+include('db_connection.php');
+$sql = "SELECT  category, image1 FROM products group by category"; // Use DISTINCT to avoid duplicate categories
+$stmt = $conn->prepare($sql);
+$stmt->execute();
+$result = $stmt->get_result();
+while ($row = $result->fetch_assoc()) {
+?>
+    <div class="col-sm-6 col-lg-4">
+        <!-- Start Product Item -->
+        <div class="product-item">
+            <div class="product-thumb">
+                <a href="collectionview.php?category=<?= urlencode($row['category']); ?>"> <!-- Pass category as a query parameter -->
+                    <img src="productimage/<?= $row['image1']; ?>" alt="<?= $row['category']; ?>">
+                    <span class="bg-thumb" data-bg-img="productimage/<?= $row['image1']; ?>"></span>
+                    <span class="thumb-overlay"></span>
+                </a>
+            </div>
+            <div class="product-info">
+                <div class="content-inner">
+                    <h4 class="title">
+                        <a href="collectionview.php?category=<?= urlencode($row['category']); ?>"><?= htmlspecialchars($row['category']); ?></a>
+                    </h4>
                 </div>
+            </div>
+        </div>
+        <!-- End Product Item -->
+    </div>
+<?php } ?>
+
+        </div>
               </div>
               <div class="tab-pane fade" id="nav-list" role="tabpanel" aria-labelledby="nav-list-tab">
                 <div class="row">

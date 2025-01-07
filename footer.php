@@ -45,7 +45,9 @@
     <!--== Scroll Top Button ==-->
     <div class="scroll-to-top"><span class="icofont-arrow-up"></span></div>
 
-   
+   <a data-bs-toggle="modal" data-bs-target="#contactModal">
+  <i class="bi bi-telephone hh2" style="font-size: 24px;"></i>
+</a>
 	<a class="hh1" href="https://wa.me/+918046045100?text=Hey%20hi%2C%20we%20are%20looking%20for%20a%20villa.%20How%20can%20we%20reach%20out%20to%20you%3F" 
    target="_blank" 
    >
